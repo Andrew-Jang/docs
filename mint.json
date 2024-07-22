@@ -1,76 +1,76 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
-  "name": "TradDocs",
-  "logo": {
-    "dark": "/logo/dark.png",
-    "light": "/logo/light.png"
-  },
-  "favicon": "",
-  "colors": {
-    "primary": "#C80212",
-    "light": "#FA9C94",
-    "dark": "#C80212",
-    "anchors": {
-      "from": "#C80212",
-      "to": "#FA9C94"
-    }
-  },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:andrewj@traddocs.com"
-    }
-  ],
-  "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://www.traddocs.com"
-  },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://docs.traddocs.com/introduction"
+    "$schema": "https://mintlify.com/schema.json",
+    "name": "TradDocs",
+    "logo": {
+        "dark": "/logo/dark.png",
+        "light": "/logo/light.png"
     },
-    {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://discord.gg/xgEXkh7Rxk"
+    "favicon": "",
+    "colors": {
+        "primary": "#C80212",
+        "light": "#FA9C94",
+        "dark": "#C80212",
+        "anchors": {
+            "from": "#C80212",
+            "to": "#FA9C94"
+        }
+    },
+    "topbarLinks": [],
+    "topbarCtaButton": {
+        "name": "Dashboard",
+        "url": "https://www.traddocs.com"
+    },
+    "tabs": [],
+    "anchors": [
+        {
+            "name": "Community",
+            "icon": "discord",
+            "url": "https://discord.gg/xgEXkh7Rxk"
+        },
+        {
+            "name": "Contact us",
+            "icon": "mail",
+            "url": "mailto:andrewj@traddocs.com"
+        }
+    ],
+    "navigation": [
+        {
+            "group": "Get Started",
+            "pages": [
+                "get-started/introduction",
+                "get-started/quickstart",
+                "get-started/development"
+            ]
+        },
+        {
+            "group": "API Documentation",
+            "pages": [
+                "introduction"
+            ]
+        },
+        {
+            "group": "Essentials",
+            "pages": [
+                "essentials/markdown",
+                "essentials/code",
+                "essentials/images",
+                "essentials/settings",
+                "essentials/navigation",
+                "essentials/reusable-snippets"
+            ]
+        },
+        {
+            "group": "Endpoint Examples",
+            "pages": [
+                "endpoint/get",
+                "endpoint/create",
+                "endpoint/delete"
+            ]
+        }
+    ],
+    "footerSocials": {
+        "x": "https://x.com/mintlify",
+        "github": "https://github.com/mintlify",
+        "linkedin": "https://www.linkedin.com/company/mintsearch"
     }
-  ],
-  "navigation": [
-    {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
-    },
-    {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
-      ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": ["api-reference/endpoint/get", "api-reference/endpoint/create", "api-reference/endpoint/delete"]
-    }
-  ],
-  "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
-  }
 }

@@ -1,6 +1,6 @@
 ---
 title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+description: 'Welcome to TradDocs’s documentation portal! 👋 '
 ---
 
 <Note>
@@ -8,26 +8,110 @@ description: 'Example section for showcasing API endpoints'
   this section by removing the api-reference folder.
 </Note>
 
-## Welcome
+## What is TradDocs?
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+TradDocs is a powerful API designed to help you extract unstructured document content and convert it into a structured JSON format. This guide will provide you with everything you need to get started, set up your environment, and customize your integration with TradDocs.
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+## Getting started
+
+The flow comprises of two parts:
+
+1. **POST a document**: This can include complex entities like tables, key-value pairs, checkboxes, etc. This triggers our AI processing and returns a `documentId`.
+2. **GET that document by ID**: Retrieve a plain text representation of that document that is easily readable for both humans and AI readers.
+
+This getting started guide will walk through one example. Let's say we have this PDF file on our local machine: `example_document.pdf`.
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Every request to DocuPanda needs to include an API key. You may obtain your API key by signing up and going to this [link](#), where your API key is visible at the bottom of the page.
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
+## Posting a Document
+
+The first thing you want to do is take that file and post it to DocuPanda. Replace `YOUR_API_KEY` with your actual API key obtained in the previous step. Supported file formats are: PDF, images (JPG, PNG, WEBP), text files, and JSONs. Regardless of the format, use base64 encoding as shown below.
+
+<CodeGroup>
+
+```bash Python
+import base64
+import requests
+
+url = "https://app.docupanda.io/document"
+api_key = "YOUR_API_KEY"
+
+payload = {"document": {"file": {
+    "contents": base64.b64encode(open("example_document.pdf", 'rb').read()).decode(),
+    "filename": "example_document.pdf"
+}}}
+headers = {
+    "accept": "application/json",
+    "content-type": "application/json",
+    "X-API-Key": api_key
+}
+
+response = requests.post(url, json=payload, headers=headers)
+document_id = response.json()['documentId']
 ```
+
+```js JavaSript
+const fetch = require('node-fetch');
+const fs = require('fs');
+
+const url = "https://app.docupanda.io/document";
+const api_key = "demo-api-key";
+
+const fileContents = fs.readFileSync("example_document.pdf");
+const formData = new FormData();
+formData.append("document", new Blob([fileContents], { type: 'application/pdf' }), "example_document.pdf");
+
+fetch(url, {
+    method: 'POST',
+    headers: {
+        "accept": "application/json",
+        "X-API-Key": api_key
+    },
+    body: formData
+})
+.then(response => response.json())
+.then(data => {
+    const document_id = data.documentId;
+    console.log(document_id); // Output the document ID
+})
+.catch(error => console.error(error));
+```
+
+</CodeGroup>
+
+## Make it yours
+
+Update your docs to your brand and add valuable content for the best user conversion.
+
+<CardGroup cols={2}>
+  <Card
+    title="Customize Style"
+    icon="palette"
+    href="https://mintlify.com/docs/settings/global"
+  >
+    Customize your docs to your company's colors and brands
+  </Card>
+  <Card
+    title="Reference APIs"
+    icon="code"
+    href="https://mintlify.com/docs/api-playground/openapi"
+  >
+    Automatically generate endpoints from an OpenAPI spec
+  </Card>
+  <Card
+    title="Add Components"
+    icon="screwdriver-wrench"
+    href="https://mintlify.com/docs/components/accordion"
+  >
+    Build interactive features and designs to guide your users
+  </Card>
+  <Card
+    title="Get Inspiration"
+    icon="stars"
+    href="https://mintlify.com/customers"
+  >
+    Check out our showcase of our favorite documentation
+  </Card>
+</CardGroup>
