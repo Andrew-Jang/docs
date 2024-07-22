@@ -23,11 +23,11 @@ This getting started guide will walk through one example. Let's say we have this
 
 ## Authentication
 
-Every request to DocuPanda needs to include an API key. You may obtain your API key by signing up and going to this [link](#), where your API key is visible at the bottom of the page.
+Every request to TradDocs needs to include an API key. You may obtain your API key by signing up and going to this [link](#), where your API key is visible at the bottom of the page.
 
 ## Posting a Document
 
-The first thing you want to do is take that file and post it to DocuPanda. Replace `YOUR_API_KEY` with your actual API key obtained in the previous step. Supported file formats are: PDF, images (JPG, PNG, WEBP), text files, and JSONs. Regardless of the format, use base64 encoding as shown below.
+The first thing you want to do is take that file and post it to TradDocs. Replace `YOUR_API_KEY` with your actual API key obtained in the previous step. Supported file formats are: PDF, images (JPG, PNG, WEBP), text files, and JSONs. Regardless of the format, use base64 encoding as shown below.
 
 <CodeGroup>
 
@@ -35,7 +35,7 @@ The first thing you want to do is take that file and post it to DocuPanda. Repla
 import base64
 import requests
 
-url = "https://app.docupanda.io/document"
+url = "https://app.TradDocs.io/document"
 api_key = "YOUR_API_KEY"
 
 payload = {"document": {"file": {
@@ -56,7 +56,7 @@ document_id = response.json()['documentId']
 const fetch = require('node-fetch');
 const fs = require('fs');
 
-const url = "https://app.docupanda.io/document";
+const url = "https://app.TradDocs.io/document";
 const api_key = "demo-api-key";
 
 const fileContents = fs.readFileSync("example_document.pdf");
