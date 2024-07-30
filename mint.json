@@ -1,6 +1,6 @@
 {
     "$schema": "https://mintlify.com/schema.json",
-    "name": "TradDocs",
+    "name": "ParDocs",
     "logo": {
         "dark": "/logo/dark.png",
         "light": "/logo/light.png"
@@ -18,7 +18,7 @@
     "topbarLinks": [],
     "topbarCtaButton": {
         "name": "Dashboard",
-        "url": "https://www.traddocs.com"
+        "url": "https://www.pardocs.com"
     },
     "tabs": [],
     "anchors": [
