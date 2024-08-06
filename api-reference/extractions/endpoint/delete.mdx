@@ -2,3 +2,21 @@
 title: "Delete Extraction"
 openapi: "DELETE /v1/extractions/{extraction_id}"
 ---
+
+<RequestExample>
+```bash cURL
+curl --request DELETE \
+  --url https://api.pardocs.com/v1/extractions/{extraction_id} \
+  --header 'x-api-key: <api-key>'
+```
+```python Python
+import requests
+
+url = "https://api.pardocs.com/v1/extractions/{extraction_id}"
+headers = {"x-api-key": "<api-key>"}
+
+response = requests.delete(url, headers=headers)
+
+print(response.json())
+```
+</RequestExample>

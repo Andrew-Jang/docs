@@ -2,3 +2,35 @@
 title: "Create Extraction"
 openapi: "POST /v1/extractions"
 ---
+
+<RequestExample>
+```bash cURL
+curl --request POST \
+  --url https://api.pardocs.com/v1/extractions \
+  --header 'Content-Type: application/json' \
+  --header 'x-api-key: <api-key>' \
+  --data '{
+  "extraction_type": "<string>",
+  "extraction_data": {}
+}'
+```
+```python Python
+import json
+import requests
+
+url = "https://api.pardocs.com/v1/extractions"
+headers = {
+    "x-api-key": "<api-key>",
+    "Content-Type": "application/json"
+}
+
+data = {
+    "extraction_type": "<string>",
+    "extraction_data": {}
+}
+
+response = requests.post(url, headers=headers, data=json.dumps(data))
+
+print(response.json())
+```
+</RequestExample>

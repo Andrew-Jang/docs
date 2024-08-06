@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "https://api.traddocs.com"
+      "url": "https://api.pardocs.com"
     }
   ],
   "paths": {
