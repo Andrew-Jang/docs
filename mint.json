@@ -31,21 +31,12 @@
       "name": "Community",
       "icon": "discord",
       "url": "https://discord.gg/xgEXkh7Rxk"
-    },
-    {
-      "name": "Contact us",
-      "icon": "envelope",
-      "url": "mailto:andrewj@traddocs.com"
     }
   ],
   "navigation": [
     {
       "group": "Get started",
-      "pages": [
-        "introduction",
-        "ratelimit",
-        "error"
-      ]
+      "pages": ["introduction", "ratelimit", "error"]
     },
     {
       "group": "Extractions",
