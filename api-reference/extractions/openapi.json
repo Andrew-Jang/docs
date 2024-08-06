@@ -1,7 +1,7 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "Document API",
+    "title": "Extraction API",
     "version": "1.0.1"
   },
   "servers": [
