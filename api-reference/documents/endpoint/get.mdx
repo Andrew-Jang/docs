@@ -1,0 +1,22 @@
+---
+title: "List Documents"
+openapi: "GET /v1/documents"
+---
+
+<RequestExample>
+```bash cURL
+curl --request GET \
+  --url https://api.pardocs.com/v1/documents \
+  --header 'x-api-key: <api-key>'
+```
+```python Python
+import requests
+
+url = "https://api.pardocs.com/v1/extractions"
+headers = {"x-api-key": "<api-key>"}
+
+response = requests.get(url, headers=headers)
+
+print(response.json())
+```
+</RequestExample>

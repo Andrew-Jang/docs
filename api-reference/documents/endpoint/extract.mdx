@@ -1,0 +1,32 @@
+---
+title: "Extract a Document"
+openapi: "POST /v1/documents/{document_id}/extraction"
+---
+
+<RequestExample>
+```bash cURL
+curl --request POST \
+  --url https://api.pardocs.com/v1/documents/{document_id}/extraction \
+  --header 'x-api-key: <api-key>'
+  --data '{
+  "extraction_ids": [
+    "<string>"
+  ]
+}'
+```
+```python Python
+import json
+import requests
+
+url = "https://api.pardocs.com/v1/documents/{document_id}/extraction"
+headers = {
+    "x-api-key": "<api-key>",
+    "Content-Type": "application/json"
+}
+data = {"extraction_ids": ["<string>"]}
+
+response = requests.post(url, headers=headers, data=json.dumps(data))
+
+print(response.json())
+```
+</RequestExample>

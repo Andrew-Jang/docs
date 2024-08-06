@@ -55,6 +55,15 @@
         "api-reference/extractions/endpoint/patch",
         "api-reference/extractions/endpoint/delete"
       ]
+    },
+    {
+      "group": "Documents",
+      "pages": [
+        "api-reference/documents/endpoint/get",
+        "api-reference/documents/endpoint/create",
+        "api-reference/documents/endpoint/split",
+        "api-reference/documents/endpoint/extract"
+      ]
     }
   ],
   "footerSocials": {
