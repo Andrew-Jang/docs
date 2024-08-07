@@ -5,11 +5,12 @@ openapi: "openapi-extractions POST /v1/extractions"
 
 The **Create Extraction Schema** endpoint allows you to define a new extraction schema for a specific document type in the ParDocs API. An extraction schema specifies the rules and structure for extracting data from documents. By creating an extraction schema, you can customize how data is extracted based on your specific needs, which can then be applied to various documents for processing.
 
-<Info>Note that `{extraction_type}` refers to the type of document.</Info>
+<Info>document type refers to the `{extraction_type}`.</Info>
+<Note>Note that this process can also be done in the [ParDocs Console](https://www.pardocs.com)</Note>
 
 **Request Body Parameters:**
 
-- `extraction_type` (string): Specifies the type of document the schema applies to.
+- `extraction_type` (string): Specifies the document type the schema applies to.
 - `extraction_data` (object): Contains the detailed schema definition for the extraction.
 
 <RequestExample>

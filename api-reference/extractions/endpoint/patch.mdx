@@ -5,9 +5,11 @@ openapi: "openapi-extractions PATCH /v1/extractions/{extraction_id}"
 
 The **Update Extraction Schema** endpoint allows you to modify an existing extraction schema identified by `{extraction_id}`. You can update one or more fields of the extraction schema. Any field that is not provided in the request will remain unchanged.
 
+<Note>Note that this process can also be done in the [ParDocs Console](https://www.pardocs.com)</Note>
+
 **Request Body Parameters:**
 
-- `extraction_type` (string, optional): Specifies the type of document the schema applies to.
+- `extraction_type` (string, optional): Specifies the document type the schema applies to.
 - `extraction_data` (object, optional): Contains the updated schema definition for the extraction.
 
 <RequestExample>
