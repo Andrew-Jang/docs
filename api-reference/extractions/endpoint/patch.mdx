@@ -1,9 +1,14 @@
 ---
-title: "Update Extraction"
+title: "Update Extraction Schema"
 openapi: "openapi-extractions PATCH /v1/extractions/{extraction_id}"
 ---
 
-You can provide one or more of the following fields to update them, any field not provided will be left unchanged.
+The **Update Extraction Schema** endpoint allows you to modify an existing extraction schema identified by `{extraction_id}`. You can update one or more fields of the extraction schema. Any field that is not provided in the request will remain unchanged.
+
+**Request Body Parameters:**
+
+- `extraction_type` (string, optional): Specifies the type of document the schema applies to.
+- `extraction_data` (object, optional): Contains the updated schema definition for the extraction.
 
 <RequestExample>
 ```bash cURL
