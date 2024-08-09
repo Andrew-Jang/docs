@@ -39,12 +39,12 @@
       "pages": ["introduction", "ratelimit", "error"]
     },
     {
-      "group": "Extraction Schemas API",
+      "group": "Templates API",
       "pages": [
-        "api-reference/extractions/endpoint/get",
-        "api-reference/extractions/endpoint/create",
-        "api-reference/extractions/endpoint/patch",
-        "api-reference/extractions/endpoint/delete"
+        "api-reference/templates/endpoint/get",
+        "api-reference/templates/endpoint/create",
+        "api-reference/templates/endpoint/patch",
+        "api-reference/templates/endpoint/delete"
       ]
     },
     {

@@ -92,12 +92,12 @@
             "application/json": {
               "schema": {
                 "properties": {
-                  "extraction_ids": {
+                  "template_ids": {
                     "type": "array",
                     "items": {
                       "type": "string"
                     },
-                    "description": "Include all extraction_id to split the document."
+                    "description": "Include all template_id to split the document."
                   }
                 }
               }
@@ -160,12 +160,12 @@
             "application/json": {
               "schema": {
                 "properties": {
-                  "extraction_ids": {
+                  "template_ids": {
                     "type": "array",
                     "items": {
                       "type": "string"
                     },
-                    "description": "Include all extraction_id to extract the document."
+                    "description": "Include all template_id to extract the document."
                   }
                 }
               }
